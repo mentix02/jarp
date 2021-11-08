@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>mentix02</Authors>
+    <Description>A simple C# parser</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mentix02/jarp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mentix02/jarp</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

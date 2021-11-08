@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jarp", "jarp.csproj", "{BF2D795C-0EE0-490F-9FA2-EA615C512D78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jarp", "Jarp.csproj", "{BF2D795C-0EE0-490F-9FA2-EA615C512D78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarpTest", "..\JarpTest\JarpTest.csproj", "{3CF027E1-4DEA-4A59-B912-D9554FF7ACDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BF2D795C-0EE0-490F-9FA2-EA615C512D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF2D795C-0EE0-490F-9FA2-EA615C512D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF2D795C-0EE0-490F-9FA2-EA615C512D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF027E1-4DEA-4A59-B912-D9554FF7ACDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF027E1-4DEA-4A59-B912-D9554FF7ACDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF027E1-4DEA-4A59-B912-D9554FF7ACDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF027E1-4DEA-4A59-B912-D9554FF7ACDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

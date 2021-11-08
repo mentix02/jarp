@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections;
 
-namespace jarp
+namespace Jarp
 {
     
-    enum TokenType
+    public enum TokenType
     {
         INT,
         EOF,
@@ -18,7 +19,7 @@ namespace jarp
         ILLEGAL,
     }
 
-    class Lexer
+    public class Lexer : IEnumerator, IEnumerable
     {
 
         private int position;
@@ -44,6 +45,8 @@ namespace jarp
         private string ExtractNumber()
         {
             int startPosition = position;
+
+            if (jstring[position] == '-') ReadChar();
             while (char.IsDigit((char)currByte)) ReadChar();
             return jstring[startPosition..position];
         }
@@ -116,7 +119,7 @@ namespace jarp
                     {
                         tok = new Token(TokenType.EOF, "");
                         return tok;
-                    } else if (char.IsDigit(currChar))
+                    } else if (char.IsDigit(currChar) || currChar == '-')
                     {
                         tok = new Token(TokenType.INT, ExtractNumber());
                         return tok;
@@ -130,6 +133,30 @@ namespace jarp
             ReadChar();
             return tok;
         }
+
+        // Methods for IEnumerator & IEnumerable
+
+        public IEnumerator GetEnumerator()
+        {
+            return (IEnumerator)this;
+        }
+
+        public bool MoveNext()
+        {
+            return position < jstring.Length;
+        }
+
+        public void Reset()
+        {
+            position = 0;
+            readPosition = 0;
+        }
+        //IEnumerable
+        public object Current
+        {
+            get { return NextToken(); }
+        }
+
 
     }
 }
